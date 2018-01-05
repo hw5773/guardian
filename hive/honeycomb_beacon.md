@@ -4,10 +4,10 @@
 > BTHP || BEACON
 
 * BTHP Header
-** version: version
-** hdrLen: header length
-** dataLen: data length
-** proxyId: proxy ID
+** version: version  
+** hdrLen: header length  
+** dataLen: data length  
+** proxyId: proxy ID  
 ** 뒤에 따라오는 길이가 32 bytes이면 BEACON version 1을 나타내고, 그렇지 않으면
 version 2를 나타냄. 이 때, version 2로 보낼 패킷 길이 (packet_size) 값을 보냄
 
