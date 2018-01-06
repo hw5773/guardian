@@ -8,8 +8,15 @@
   * hdrLen: header length
   * dataLen: data length
   * proxyId: proxy ID
-  * 뒤에 따라오는 길이가 32 bytes이면 BEACON version 1을 나타내고, 그렇지 않으면
-    version 2를 나타냄. 이 때, version 2로 보낼 패킷 길이 (packet size) 값을 보냄
+  * additional headers: type, length, data. Terminated by a header with
+    `type = 0` & `length = 0`. Contains the beacon, proxy, and dst IPs. These
+    additiona BTHP headers are different from the additional beacon headers
+    below.
+  * First packet: 뒤에 따라오는 길이가 32 bytes이면 BEACON version 1을 나타내고, 그렇지 않으면
+version 2를 나타냄. 이 때, version 2로 보낼 패킷 길이 (packet size) 값을 보냄
+
+* encryption: uses the xtea algorithm, but the key is generated at the Honeycomb
+  instance and sent back in the clear.
 
 * BEACON Version 1
   * 데이터는 암호화되서 옴
@@ -49,4 +56,3 @@
   * 2: Linux-x86
   * 3: Solaris-NFI
   * 5: MikroTik-NFI
-
