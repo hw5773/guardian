@@ -1,6 +1,6 @@
 # client
 
-![client_operation](./client_operation.png)
+![client_operation](./client-operation.png)
 
 Hive의 기능은 크게 Implanted Host로 부터 Beacon을 전송받는 것, 그리고 Host와 Interactive 통신을 하는 것 두가지가 있다.
 
