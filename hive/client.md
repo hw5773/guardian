@@ -1,12 +1,10 @@
 # client
 
-![Hive Structure](https://wikileaks.org/hive.png)
+![client_operation](./client_operation.png)
 
-위의 그림에서 `Blot4.0` 에 해당하는 부분
+Hive의 기능은 크게 Implanted Host로 부터 Beacon을 전송받는 것, 그리고 Host와 Interactive 통신을 하는 것 두가지가 있다.
 
-Implanted Host와 HoneyComb의 중간에 위치하며,
-
-Host와 세션을 구성하여 통신하는 역할을 한다.
+client 파트는 Host와 세션을 구성하여 통신하는 역할을 한다.
 
 Host와 통신할 때는 먼저 트리거(trigger)를 전송하여야 한다. 트리거가 전송되고 나면 Host는 callback 메세지를 보내고, Host와 SSL 세션을 연결하여 통신한다.
 
